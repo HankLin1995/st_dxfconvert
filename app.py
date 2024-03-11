@@ -39,6 +39,8 @@ if uploaded_file is not None:
     else:
         df = pd.read_csv(uploaded_file, header=None)
 
+    st.write("CSV檔案內容")
+
     st.dataframe(df)
 
 
