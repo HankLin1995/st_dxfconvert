@@ -46,7 +46,8 @@ if uploaded_file is not None:
     st.divider()
     # Step 3: 转换成 DXF 文件
     # 创建一个新的 DXF 文档
-    if(st.button("Step3.繪製點資料","submit")):
+    st.write(" ##### Step3.繪製點資料:")
+    if(st.button("產生DXF檔","submit")):
 
         doc = ezdxf.new('R2010')
         msp = doc.modelspace()
