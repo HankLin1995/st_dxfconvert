@@ -43,7 +43,7 @@ if uploaded_file is not None:
 
     st.dataframe(df)
 
-
+    st.divider()
     # Step 3: 转换成 DXF 文件
     # 创建一个新的 DXF 文档
     if(st.button("Step3.繪製點資料","submit")):
