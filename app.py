@@ -28,8 +28,8 @@ if uploaded_file is not None:
     st.write(" ##### Step2.CSV檔案配置:")
 
     has_header = st.radio("是否具有標題行?", ('是', '否'),1)
-    nez_order = st.selectbox("選擇 N.E.Z.CD 顺序", ['N,E,Z,CD', 'E,N,Z,CD'])
-    txtheight=st.text_input("請輸入文字高度",1.5)
+    # nez_order = st.selectbox("選擇 N.E.Z.CD 顺序", ['N,E,Z,CD', 'E,N,Z,CD'])
+    txtheight=st.text_input("請輸入CAD文字高度",1.5)
 
     st.divider()
 
@@ -39,9 +39,9 @@ if uploaded_file is not None:
     else:
         df = pd.read_csv(uploaded_file, header=None)
 
-    st.write("CSV檔案內容")
-
-    st.dataframe(df)
+    st.write("**CSV檔案內容**")
+    nez_order = st.selectbox("選擇 0.  1.   2.   3. 顺序", ['N,E,Z,CD', 'E,N,Z,CD'])
+    st.dataframe(df,hide_index=True)
 
     st.divider()
     # Step 3: 转换成 DXF 文件
